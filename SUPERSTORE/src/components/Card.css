@@ -1,0 +1,154 @@
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* important if you want equal height cards inside a grid */
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* prevent image shrinking */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* take all remaining space */
+  justify-content: space-between; /* push price/button to bottom */
+  gap: 0.5rem;
+}
+
+.card-details {
+  /* this wraps rating and category, no flex needed here */
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  /* Optional: limit title lines and add ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  /* max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price {
+  color: #2d72d9;
+  font-weight: bold;
+}
+
+.card-rating {
+  font-size: 0.9rem;
+  color: #ffa500;
+  margin-bottom: 0.3rem;
+}
+
+.card-category {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.card-button {
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #2d72d9;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #1a4bb8;
+}
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* important if you want equal height cards inside a grid */
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* prevent image shrinking */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* take all remaining space */
+  justify-content: space-between; /* push price/button to bottom */
+  gap: 0.5rem;
+}
+
+.card-details {
+  /* this wraps rating and category, no flex needed here */
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  /* Optional: limit title lines and add ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  /* max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price {
+  color: #2d72d9;
+  font-weight: bold;
+}
+
+.card-rating {
+  font-size: 0.9rem;
+  color: #ffa500;
+  margin-bottom: 0.3rem;
+}
+
+.card-category {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.card-button {
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #2d72d9;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: var(--accent-color);
+}
