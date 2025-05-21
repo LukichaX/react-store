@@ -1,0 +1,53 @@
+.not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    text-align: center;
+}
+
+.details-title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.details-container {
+    align-items: center;
+    text-align: center;
+}
+
+.details-wrapper{
+    margin: 1rem; 
+    background-color: var(--pagebackground-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+.post-wrapper{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.desc{
+    background-color: var(--pagebackground-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.details-info{
+    display: inline-block;
+    border-radius: 1rem;
+    background-color: var(--pagebackground-color);
+    padding: 1rem;
+}
+
+

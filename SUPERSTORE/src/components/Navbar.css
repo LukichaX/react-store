@@ -3,7 +3,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Changed from center to space-between */
     background: #222;
     padding: 0.5rem 2rem;
     margin: auto auto 0 auto;
@@ -16,47 +16,28 @@
     backdrop-filter: blur(6px);
     border: 1px solid rgba(255,255,255,0.12);
     gap: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-.navbar-left, .navbar-right {
+
+.navbar-left {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.navbar-search {
-    display: flex;
-    align-items: center;
-    background: rgba(255,255,255,0.08);
-    box-shadow: #ffd700;
-    border: 2px solid #2d72d9;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    max-width: 400px;
-}
-
-.navbar-search-btn{
-    border-radius: 1rem;
+    flex: 1; /* allow left side to grow */
+    justify-content: space-between; /* logo left, links right */
 }
 
 .navbar-logo {
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
-    margin-right: 2rem;
     letter-spacing: 2px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* prevent shrinking */
 }
 
 .navbar-links {
     display: flex;
     gap: 1rem;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: center;
+    /* Removed flex:1 and justify-content */
 }
 
 .navbar-links a {
@@ -73,10 +54,45 @@
     color: #ffd700;
 }
 
-.navbar-search:hover{
-    border-color: #ffb400;
-    transition: 0.2;
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* no flex grow */
 }
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    box-shadow: #ffd700;
+    border: 2px solid #2d72d9;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.navbar-search-btn {
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #2d72d9;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-search-btn:hover {
+    background-color: #1a4bb8;
+}
+
+.navbar-search:hover {
+    border-color: #ffb400;
+    transition: border-color 0.2s ease;
+}
+
+/* Responsive */
 
 @media (max-width: 700px) {
     .navbar {
@@ -85,6 +101,9 @@
         padding: 1rem;
         min-width: 0;
         width: 98vw;
+    }
+    .navbar-left {
+        justify-content: center;
     }
     .navbar-links {
         justify-content: center;

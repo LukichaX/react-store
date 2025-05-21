@@ -1,6 +1,8 @@
 import "./home.css";
 import React, { useState, useEffect } from "react";
-import Card from "../components/Card";
+import Card from "../../components/Card";
+import ClipLoader from "react-spinners/ClipLoader";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -19,15 +21,27 @@ export default function Home() {
       });
   }, []);
 
-  if (loading) return <p className="loading">Loading products...</p>;
+  if (loading) {
+    return (
+      <div className="loading-wrapper">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
 
   return (
     <>
+      <h1 className="home-title">Store</h1>
       <div className="home-container">
-        <h1 className="home-title">Store</h1>
         <div className="home-products">
           {products.map((product) => (
-            <Card key={product.id} product={product} />
+            <Link
+              key={product.id}
+              to={`/post-details/${product.id}`}
+              style={{ textDecoration: "none", color: "inherit" }} // optional styling so link doesn’t mess with card styles
+            >
+              <Card product={product} />
+            </Link>
           ))}
         </div>
       </div>

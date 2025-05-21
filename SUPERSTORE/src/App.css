@@ -4,11 +4,13 @@
   --accent-color: #ffb400;
   --text-color: #222;
   --background-color: #fff;
+  --pagebackground-color: #f0f0f0;
   --border-radius: 6px;
   --transition: 0.2s ease;
   --font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* container for page content, centered with max-width */
 .app-container {
   width: 100%;
   max-width: 1500px;
@@ -16,28 +18,32 @@
   padding: 1rem;
 }
 
+/* reset margin/padding and set font/color for root elements */
 html, body, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--background-color);
+  height: 100%;
   color: var(--text-color);
   font-family: var(--font-family);
 }
 
-* {
+/* global box-sizing for consistent sizing */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+/* link styles */
 a {
   color: var(--primary-color);
   text-decoration: none;
   transition: color var(--transition);
 }
-
 a:hover {
   color: var(--accent-color);
 }
 
+/* button styles */
 button {
   font-family: inherit;
   border: none;
@@ -48,7 +54,6 @@ button {
   cursor: pointer;
   transition: background var(--transition);
 }
-
 button:hover {
   background: var(--accent-color);
   color: #222;
